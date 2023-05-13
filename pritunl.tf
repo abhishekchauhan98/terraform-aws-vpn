@@ -25,6 +25,7 @@ resource "aws_instance" "ec2" {
   instance_type           = var.instance_type
   subnet_id               = var.subnet_id
   vpc_security_group_ids  = [var.security_group_id == "" ? aws_security_group.default[0].id : var.security_group_id]
+  iam_instance_profile    = var.iam_instance_profile
   key_name                = var.key_name
   ebs_optimized           = var.ebs_optimized
   disable_api_termination = var.disable_api_termination

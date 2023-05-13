@@ -26,6 +26,12 @@ variable "disable_api_termination" {
   default     = true
 }
 
+variable "iam_instance_profile"{
+  description = "Instance profile name for ec2 instance"
+  type = string
+  default = ""
+}
+
 variable "ebs_optimized" {
   description = "If true, the launched EC2 instance will be EBS-optimized"
   type        = bool
